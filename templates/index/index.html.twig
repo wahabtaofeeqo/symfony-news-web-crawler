@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Articles{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="container py-3">
+    <div class="col-lg-6 mx-auto">
+        
+        {% for article in articles %}
+            <div class="card mb-4 border-0">
+                <div class="p-3">
+                    <p class="card-title h4 mb-3">
+                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </p>
+
+                    <div>
+                        <img src="images/bg.jpeg" class="rounded-circle" alt="" height="35px" width="35px">
+                        <span class="px-2">Writer</span>
+                    </div>
+                </div>
+
+                <img src="images/bg.jpeg" class="card-img-top border-0" style="border-radius: 0" alt="" height="250px" width="100%">
+                <div class="card-body">
+                    <h5 class="card-title d-none">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary d-none">Go somewhere</a>
+                </div>
+            </div>  
+        {% endfor %}
+
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+{% endblock %}
